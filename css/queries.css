@@ -1,0 +1,38 @@
+/* BELOW 1200px (Landscape Tablets) */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* BELOW 944px (Tablets) */
+/* *************************** */
+@media (max-width: 59em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+/* BELOW 704px (Smaller Tablets) */
+@media (max-width: 49em) {
+  html {
+    font-size: 50%;
+  }
+  .container-img {
+    display: none;
+  }
+  .container-login {
+    width: 100vw;
+    height: 100vh;
+  }
+  form .login-field {
+    margin: 5rem 0;
+  }
+}
+
+/* BELOW 544px (Phones) */
+@media (max-width: 34em) {
+  .login-center {
+    width: fit-content;
+  }
+}
