@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+
+    <!-- JS LINK -->
+    <script defer src="js/script.js"></script>
+
+    <title>DSCE Portal</title>
+  </head>
+  <body>
+    <div class="container grid grid--2-cols-login">
+      <section class="container-img">
+        <div class="slider">
+          <img src="img/dscelogo.png" alt="logo" class="slider-logo" />
+          <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
+          <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
+          <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
+          <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div>
+          <div class="slide"><img src="img/img-5.webp" alt="Photo 5" /></div>
+
+          <button class="slider__btn slider__btn--left">&larr;</button>
+          <button class="slider__btn slider__btn--right">&rarr;</button>
+          <div class="dots"></div>
+        </div>
+      </section>
+      <section class="container-login">
+        <img src="img/logo.jpg" alt="logo" class="login-logo" />
+        <div class="login-center">
+          <!-- <h1>Login</h1> -->
+          <form method="get" name="login" action="/login">
+            <div class="login-field">
+              <input type="email" required />
+              <!-- <span></span> -->
+              <label>Username</label>
+            </div>
+            <div class="login-field">
+              <input type="password" required />
+              <!-- <span></span> -->
+              <label>Password</label>
+            </div>
+            <a class="login-pass">Forgot Password?</a>
+            <button type="submit" class="login-submit">Login</button>
+            <!-- <input type="submit" value="Login" /> -->
+            <!-- <div class="signup_link">Not a member? <a href="#">Signup</a></div> -->
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
