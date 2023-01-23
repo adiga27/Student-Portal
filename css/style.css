@@ -184,13 +184,20 @@ form .login-field {
 }
 
 .login-pass {
+  font-size: 1.6rem;
+  font-family: inherit;
   display: inline-block;
   margin: -0.5rem 0 2rem 0.5rem;
   color: #a6a6a6;
+  background-color: inherit;
   cursor: pointer;
 }
 
 .login-pass:hover {
+  text-decoration: underline;
+}
+
+.login-pass:focus {
   text-decoration: underline;
 }
 
@@ -212,6 +219,13 @@ form .login-field {
   box-shadow: 1px 1px 1px #1e90db;
   transition: 0.5s;
 }
+
+.login-submit:focus {
+  border: none;
+  box-shadow: 1px 1px 1px #1e90db;
+  transition: 0.5s;
+}
+
 /* Sign Up */
 /* .signup_link {
   margin: 30px 0;

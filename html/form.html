@@ -5,31 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/registration.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
 
     <!----===== Iconscout CSS ===== -->
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <!-- ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
     <!--<title>Responsive Regisration Form </title>-->
   </head>
   <body>
-    <div class="container">
-      <header>Registration</header>
-
-      <form action="#">
-        <div class="form first">
-          <div class="details personal">
-            <span class="title">Personal Details</span>
-
-            <div class="fields">
+    <div class="regis-container">
+      <header>
+        <nav class="regis-nav">
+          <img src="../img/dscelogo.png" alt="logo" class="regis-logo" />
+          <div class="regis-nav_field">
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Registration</a>
+            <a href="#" class="nav-link">Notes</a>
+            <a href="#" class="nav-link">Result</a>
+            <a href="#" rel="logout" class="nav-link">Log Out</a>
+          </div>
+        </nav>
+      </header>
+      <section class="regis-form">
+        <h1 class="form-header">Registration</h1>
+        <form method="post" action="/register">
+          <div class="form form-1">
+            <p class="form-title">Personal Details</p>
+            <div class="fields grid grid--3-cols">
+              <!-- ********************* -->
+              <!-- Personal Details -->
               <div class="input-field">
                 <label>Full Name</label>
                 <input type="text" placeholder="Enter your name" required />
+              </div>
+
+              <div class="input-field">
+                <label>USN</label>
+                <input type="text" placeholder="Enter your USN" required />
               </div>
 
               <div class="input-field">
@@ -39,7 +74,7 @@
 
               <div class="input-field">
                 <label>Email</label>
-                <input type="text" placeholder="Enter your email" required />
+                <input type="email" placeholder="Enter your email" required />
               </div>
 
               <div class="input-field">
@@ -62,78 +97,21 @@
               </div>
 
               <div class="input-field">
-                <label>Occupation</label>
+                <label>Father Name</label>
+                <input type="text" placeholder="Enter father name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Mother Name</label>
+                <input type="text" placeholder="Enter mother name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Address</label>
                 <input
                   type="text"
-                  placeholder="Enter your ccupation"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- This div should be removed after removing the below comment -->
-
-        <!-- <div class="details ID">
-            <span class="title">Identity Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>ID Type</label>
-                <input type="text" placeholder="Enter ID type" required />
-              </div>
-
-              <div class="input-field">
-                <label>ID Number</label>
-                <input type="number" placeholder="Enter ID number" required />
-              </div>
-
-              <div class="input-field">
-                <label>Issued Authority</label>
-                <input
-                  type="text"
-                  placeholder="Enter issued authority"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Issued State</label>
-                <input type="text" placeholder="Enter issued state" required />
-              </div>
-
-              <div class="input-field">
-                <label>Issued Date</label>
-                <input
-                  type="date"
-                  placeholder="Enter your issued date"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Expiry Date</label>
-                <input type="date" placeholder="Enter expiry date" required />
-              </div>
-            </div>
-
-            <button class="nextBtn">
-              <span class="btnText">Next</span>
-              <i class="uil uil-navigator"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="form second">
-          <div class="details address">
-            <span class="title">Address Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>Address Type</label>
-                <input
-                  type="text"
-                  placeholder="Permanent or Temporary"
+                  placeholder="Enter your address"
+                  class="input-field_address"
                   required
                 />
               </div>
@@ -152,78 +130,195 @@
                 <label>District</label>
                 <input type="text" placeholder="Enter your district" required />
               </div>
+            </div>
+          </div>
+          <!-- ************************** -->
+          <!-- ACADEMIC DETAILS -->
+          <div class="form form-2">
+            <p class="form-title">Academic Details</p>
+            <div class="fields grid grid--4-cols">
+              <div class="input-field">
+                <label>10th Board</label>
+                <select required>
+                  <option disabled selected>Select Board</option>
+                  <option>State</option>
+                  <option>CBSE</option>
+                  <option>ICSE</option>
+                  <option>Other</option>
+                </select>
+              </div>
 
               <div class="input-field">
-                <label>Block Number</label>
+                <label>10th Register Number</label>
                 <input
                   type="number"
-                  placeholder="Enter block number"
+                  placeholder="Enter register number"
                   required
                 />
               </div>
 
               <div class="input-field">
-                <label>Ward Number</label>
-                <input type="number" placeholder="Enter ward number" required />
+                <label>10th Max Marks</label>
+                <input
+                  type="number"
+                  placeholder="Enter 10th Max Marks"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>10th Obtained Marks</label>
+                <input
+                  type="number"
+                  placeholder="Enter Obtained Marks"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>12th Board</label>
+                <select required>
+                  <option disabled selected>Select Board</option>
+                  <option>State</option>
+                  <option>CBSE</option>
+                  <option>ICSE</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>12th Register Number</label>
+                <input
+                  type="number"
+                  placeholder="Enter register number"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>12th Max Marks</label>
+                <input type="number" placeholder="Enter Max Marks" required />
+              </div>
+
+              <div class="input-field">
+                <label>12th Obtained Marks</label>
+                <input
+                  type="number"
+                  placeholder="Enter Obtained Marks"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Admission through</label>
+                <select required>
+                  <option disabled selected>Select Admission</option>
+                  <option>K-CET</option>
+                  <option>COMED-K</option>
+                  <option>MANAGEMENT</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Admission Number</label>
+                <input
+                  type="number"
+                  placeholder="Enter Admission number"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>KCET or COMEDK Rank</label>
+                <input type="number" placeholder="Enter Rank" required />
               </div>
             </div>
           </div>
+          <div class="submit-center">
+            <button class="btn btn-submit" type="submit">
+              <span class="btnText">Submit</span>
+              <i class="uil uil-navigator"></i>
+            </button>
 
-          <div class="details family">
-            <span class="title">Family Details</span>
-
-            <div class="fields">
-              <div class="input-field">
-                <label>Father Name</label>
-                <input type="text" placeholder="Enter father name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Mother Name</label>
-                <input type="text" placeholder="Enter mother name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Grandfather</label>
-                <input
-                  type="text"
-                  placeholder="Enter grandfther name"
-                  required
-                />
-              </div>
-
-              <div class="input-field">
-                <label>Spouse Name</label>
-                <input type="text" placeholder="Enter spouse name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Father in Law</label>
-                <input type="text" placeholder="Father in law name" required />
-              </div>
-
-              <div class="input-field">
-                <label>Mother in Law</label>
-                <input type="text" placeholder="Mother in law name" required />
-              </div>
-            </div>
-
-            <div class="buttons">
-              <div class="backBtn">
-                <i class="uil uil-navigator"></i>
-                <span class="btnText">Back</span>
-              </div>
-
-              <button class="sumbit">
-                <span class="btnText">Submit</span>
-                <i class="uil uil-navigator"></i>
-              </button>
-            </div>
-          </div> 
-        </div> -->
-      </form>
+            <button class="btn btn-reset" type="reset">
+              <span class="btnText">Reset</span>
+            </button>
+          </div>
+        </form>
+      </section>
+      <footer class="footer">
+        <div class="grid grid--3-cols footer-grid">
+          <div class="logo-col">
+            <a href="#"
+              ><img src="../img/dscelogo.png" alt="logo" class="footer-logo"
+            /></a>
+            <ul class="social-links">
+              <li>
+                <a
+                  class="footer-link"
+                  target="_blank"
+                  href="https://www.instagram.com/dsce.official/?hl=en"
+                  ><ion-icon
+                    class="social-icon"
+                    name="logo-instagram"
+                  ></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  target="_blank"
+                  href="https://www.facebook.com/dsceofficial/"
+                  ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  target="_blank"
+                  href="https://mobile.twitter.com/dsubangalore"
+                  ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  target="_blank"
+                  href="https://www.linkedin.com/school/dayananda-sagar-college-of-engineering-bangalore/"
+                  ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+                ></a>
+              </li>
+            </ul>
+            <p class="copyright">
+              Copyright &copy; <span class="year">2023</span> by DSCE,<br />
+              All rights reserved.
+            </p>
+          </div>
+          <nav class="nav-col">
+            <p class="footer-heading">Links</p>
+            <ul class="footer-nav">
+              <li><a class="footer-link" href="#">About</a></li>
+              <li><a class="footer-link" href="#">Registration</a></li>
+              <li><a class="footer-link" href="#">Notes</a></li>
+              <li><a class="footer-link" href="#">Results</a></li>
+            </ul>
+          </nav>
+          <div class="address-col">
+            <p class="footer-heading">Contact us</p>
+            <address class="contact">
+              <p class="address">
+                Shavige Malleshwara Hills, 91st Main Rd, 1st Stage, Kumaraswamy
+                Layout, Bengaluru, Karnataka 560078
+              </p>
+              <a class="footer-link" href="tel:080 4216 1750">080 4216 1750</a
+              ><br />
+              <a class="footer-link" href="mailto:admissions@dayanandasagar.edu"
+                >admissions@dayanandasagar.edu</a
+              >
+            </address>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <!--<script src="script.js"></script>-->
   </body>
 </html>
