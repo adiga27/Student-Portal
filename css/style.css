@@ -187,6 +187,7 @@ form .login-field {
   font-size: 1.6rem;
   font-family: inherit;
   display: inline-block;
+  border: none;
   margin: -0.5rem 0 2rem 0.5rem;
   color: #a6a6a6;
   background-color: inherit;

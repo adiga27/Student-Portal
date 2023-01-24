@@ -51,7 +51,7 @@
       </header>
       <section class="regis-form">
         <h1 class="form-header">Registration</h1>
-        <form method="post" action="/register">
+        <form method="post" action="input">
           <div class="form form-1">
             <p class="form-title">Personal Details</p>
             <div class="fields grid grid--3-cols">
@@ -59,22 +59,42 @@
               <!-- Personal Details -->
               <div class="input-field">
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your name" required />
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  name="full-name"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>USN</label>
-                <input type="text" placeholder="Enter your USN" required />
+                <input
+                  type="text"
+                  placeholder="Enter your USN"
+                  name="usn"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>Date of Birth</label>
-                <input type="date" placeholder="Enter birth date" required />
+                <input
+                  type="date"
+                  placeholder="Enter birth date"
+                  name="dob"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>Email</label>
-                <input type="email" placeholder="Enter your email" required />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  name="email"
+                  required
+                />
               </div>
 
               <div class="input-field">
@@ -82,13 +102,14 @@
                 <input
                   type="number"
                   placeholder="Enter mobile number"
+                  name="mob-number"
                   required
                 />
               </div>
 
               <div class="input-field">
                 <label>Gender</label>
-                <select required>
+                <select required name="gender">
                   <option disabled selected>Select gender</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -98,12 +119,22 @@
 
               <div class="input-field">
                 <label>Father Name</label>
-                <input type="text" placeholder="Enter father name" required />
+                <input
+                  type="text"
+                  placeholder="Enter father name"
+                  name="father-name"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>Mother Name</label>
-                <input type="text" placeholder="Enter mother name" required />
+                <input
+                  type="text"
+                  placeholder="Enter mother name"
+                  name="mother-name"
+                  required
+                />
               </div>
 
               <div class="input-field">
@@ -112,23 +143,39 @@
                   type="text"
                   placeholder="Enter your address"
                   class="input-field_address"
+                  name="address"
                   required
                 />
               </div>
 
               <div class="input-field">
                 <label>Nationality</label>
-                <input type="text" placeholder="Enter nationality" required />
+                <input
+                  type="text"
+                  placeholder="Enter nationality"
+                  name="nationality"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>State</label>
-                <input type="text" placeholder="Enter your state" required />
+                <input
+                  type="text"
+                  placeholder="Enter your state"
+                  name="state"
+                  required
+                />
               </div>
 
               <div class="input-field">
                 <label>District</label>
-                <input type="text" placeholder="Enter your district" required />
+                <input
+                  type="text"
+                  placeholder="Enter your district"
+                  name="district"
+                  required
+                />
               </div>
             </div>
           </div>
@@ -139,9 +186,9 @@
             <div class="fields grid grid--4-cols">
               <div class="input-field">
                 <label>10th Board</label>
-                <select required>
+                <select name="10-board" required>
                   <option disabled selected>Select Board</option>
-                  <option>State</option>
+                  <option>State Board</option>
                   <option>CBSE</option>
                   <option>ICSE</option>
                   <option>Other</option>
@@ -153,6 +200,7 @@
                 <input
                   type="number"
                   placeholder="Enter register number"
+                  name="10-number"
                   required
                 />
               </div>
@@ -162,6 +210,7 @@
                 <input
                   type="number"
                   placeholder="Enter 10th Max Marks"
+                  name="10-max"
                   required
                 />
               </div>
@@ -171,15 +220,16 @@
                 <input
                   type="number"
                   placeholder="Enter Obtained Marks"
+                  name="10-obtained"
                   required
                 />
               </div>
 
               <div class="input-field">
                 <label>12th Board</label>
-                <select required>
+                <select name="12-board" required>
                   <option disabled selected>Select Board</option>
-                  <option>State</option>
+                  <option>State Board</option>
                   <option>CBSE</option>
                   <option>ICSE</option>
                   <option>Other</option>
@@ -191,13 +241,19 @@
                 <input
                   type="number"
                   placeholder="Enter register number"
+                  name="12-regis"
                   required
                 />
               </div>
 
               <div class="input-field">
                 <label>12th Max Marks</label>
-                <input type="number" placeholder="Enter Max Marks" required />
+                <input
+                  type="number"
+                  placeholder="Enter Max Marks"
+                  name="12-max"
+                  required
+                />
               </div>
 
               <div class="input-field">
@@ -205,13 +261,14 @@
                 <input
                   type="number"
                   placeholder="Enter Obtained Marks"
+                  name="12-obtained"
                   required
                 />
               </div>
 
               <div class="input-field">
                 <label>Admission through</label>
-                <select required>
+                <select name="12-admission" required>
                   <option disabled selected>Select Admission</option>
                   <option>K-CET</option>
                   <option>COMED-K</option>
@@ -224,13 +281,19 @@
                 <input
                   type="number"
                   placeholder="Enter Admission number"
+                  name="12-number"
                   required
                 />
               </div>
 
               <div class="input-field">
                 <label>KCET or COMEDK Rank</label>
-                <input type="number" placeholder="Enter Rank" required />
+                <input
+                  type="number"
+                  placeholder="Enter Rank"
+                  name="rank"
+                  required
+                />
               </div>
             </div>
           </div>
