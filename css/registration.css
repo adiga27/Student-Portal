@@ -1,6 +1,16 @@
-/* *************** */
-/* Registration */
-/* ************** */
+@import "general.css";
+/* ***************** */
+/* CONTAINER */
+/* **************** */
+.regis {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* ******************* */
+/* NAVIGATION */
+/* ******************** */
 .regis-nav {
   display: flex;
   justify-content: space-between;
@@ -8,11 +18,18 @@
   padding: 0 5rem;
   background-color: #265df2;
   width: 100%;
-  height: 8rem;
+  min-height: 8rem;
 }
 
 .regis-logo {
   height: 6rem;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
 }
 
 .nav-link:link,
@@ -21,7 +38,6 @@
   text-decoration: none;
   color: #fff;
   font-size: 1.8rem;
-  margin-right: 5rem;
 }
 
 .nav-link:hover,
@@ -29,49 +45,90 @@
   text-decoration: underline;
 }
 
-.regis-form {
-  padding: 7rem 6rem;
+/* Mobile Nav */
+.btn-mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #fff;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
-.form-header {
+/* ********** */
+/* STICKY NAVIGATION */
+/* ********* */
+.sticky .regis-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  height: 8rem;
+  width: 100%;
+  padding: 0 5rem;
+  z-index: 999;
+}
+
+/* *************** */
+/* ABOUT */
+/* ************** */
+.regis-container {
+  margin-top: 8rem;
+  flex-grow: 1;
+}
+.about {
+  margin-bottom: 5rem;
+}
+
+.about-des {
+  line-height: 1.2;
+  text-align: justify;
+  font-size: 1.8rem;
+  margin: 4rem;
+}
+
+.about-grid {
+  border-top: 1px solid #265df2;
+  column-gap: 5rem;
+}
+
+.unlist {
+  padding: 0 4rem;
+}
+
+.list {
+  line-height: 1.3;
+  text-align: justify;
   padding-bottom: 1rem;
-  font-size: 3.2rem;
-  font-weight: 700;
-  color: #333;
-  border-bottom: 1px solid #4070f4;
+}
+.highlight {
+  grid-column: 1/-1;
 }
 
-.form-title {
-  color: #444;
-  font-size: 2.4rem;
-  font-weight: 500;
-  margin: 3rem 0 2rem 0;
-  position: relative;
-}
-
-.form-title::before {
-  content: "";
-  position: absolute;
-  border: 2px solid #265df2;
-  width: 12%;
-  top: 2.5rem;
-  left: 0;
-}
-
+/* *************** */
+/* REGISTRATION */
+/* ************** */
 .fields {
-  gap: 4rem 15rem;
+  gap: 4rem 12rem;
   padding-bottom: 6rem;
   border-bottom: 1px solid #265df2;
 }
 
 .input-field {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 .input-field label {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
   color: #2e2e2e;
+  margin-bottom: 0.5rem;
 }
 
 .input-field label::after {
@@ -115,16 +172,82 @@ select {
 }
 
 /* ************* */
-/* Footer */
+/* NOTES AND MARKS ENTRY  */
+/* ************ */
+.notes-sem {
+  margin: 1rem 1rem 0 1rem;
+}
+.search-field {
+  width: 20rem;
+}
+.search-field_notes {
+  display: inline-block;
+  margin-top: 3rem;
+  width: 20rem;
+}
+.result-input {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.notes {
+  margin-bottom: 6rem;
+}
+
+.notes-box {
+  margin-right: 5rem;
+  border: 1px solid #777;
+  border-radius: 1rem;
+  transition: 0.4s all;
+}
+
+.notes-box:hover {
+  transform: translateY(-1rem);
+  box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.404);
+}
+
+.notes-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.notes-link span {
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+
+.notes-img {
+  padding: 0.5rem;
+  border-right: 1px solid #777;
+  height: 10rem;
+  width: auto;
+}
+
+/* ************* */
+/* RESULT */
+/* ************* */
+.result-btn {
+  margin-top: 1.6rem;
+}
+
+/* ************* */
+/* FOOTER */
 /* ************ */
 .footer {
   height: 30rem;
-  padding: 5rem 10rem;
+  padding: 4rem 5.8rem;
   background-color: #265df2;
+  color: #fff;
+  flex-shrink: 0;
 }
 
 .footer-grid {
   justify-items: center;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr;
 }
 
 .footer-logo {
@@ -151,7 +274,6 @@ select {
 }
 
 .copyright {
-  color: #fff;
   line-height: 1.6;
   font-size: 1.4rem;
   margin-top: auto;
@@ -159,7 +281,6 @@ select {
 
 .contact {
   font-size: 1.6rem;
-  color: #fff;
   font-style: normal;
   line-height: 1.6;
 }
@@ -169,10 +290,9 @@ select {
 }
 
 .footer-heading {
-  color: #fff;
   font-size: 1.8rem;
   font-weight: 500;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   padding-top: 2rem;
 }
 
@@ -183,15 +303,26 @@ select {
   gap: 2.4rem;
 }
 
+.footer-about span {
+  color: #ebdb05;
+}
+
+.address {
+  font-style: italic;
+}
+
 .footer-link:link,
 .footer-link:visited {
   text-decoration: none;
   font-size: 1.6rem;
-  color: #fff;
   transition: all 0.3s;
+  color: #d8e4ff;
 }
 
 .footer-link:hover,
 .footer-link:active {
-  color: #ebdb05;
+  text-decoration: underline;
+}
+.mail:link {
+  font-size: 1.4rem;
 }
