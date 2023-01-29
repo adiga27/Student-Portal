@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- *************** -->
+    <!-- META DESCRIPTION -->
+    <!-- *************** -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="DSCE Portal is website for student to register their details, to download the notes and to check the results"
+    />
+    <meta name="theme-color" content="#000" />
+
+    <!-- *************** -->
+    <!-- TAB ICON -->
+    <!-- *************** -->
+    <link rel="icon" href="../img/tab-icon.webp" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.webp" />
 
     <!-- *************** -->
     <!-- FONTS -->
@@ -60,13 +74,27 @@
           /></a>
           <div class="regis-nav_field">
             <ul class="main-nav-list">
-              <a href="#" class="nav-link nav-about">About</a>
-              <a href="#" class="nav-link nav-regis">Registration</a>
-              <a href="#" class="nav-link nav-notes">Notes</a>
-              <a href="#" class="nav-link nav-result">Result</a>
-              <a href="#" rel="logout" class="nav-link nav-logout" name="logout"
-                >Log Out</a
-              >
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-about">About</a>
+              </li>
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-regis">Registration</a>
+              </li>
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-notes">Notes</a>
+              </li>
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-result">Result</a>
+              </li>
+              <li class="main-nav-link">
+                <a
+                  href="#"
+                  rel="logout"
+                  class="nav-link nav-logout"
+                  name="logout"
+                  >Log Out</a
+                >
+              </li>
             </ul>
           </div>
           <button class="btn-mobile-nav">
@@ -189,7 +217,7 @@
       <!-- *************** -->
       <section class="regis-container regis-form hidden">
         <h1 class="primary-heading form-header">Registration</h1>
-        <form method="post" action="input">
+        <form method="post" action="input" name="register">
           <div class="form form-1">
             <h2 class="secondary-heading form-title">Personal Details</h2>
             <div class="fields grid grid--3-cols fileds-1">
@@ -334,7 +362,7 @@
                 <input
                   type="number"
                   placeholder="Enter register number"
-                  name="10-number"
+                  name="10-regis"
                   required
                 />
               </div>
@@ -415,7 +443,7 @@
                 <input
                   type="number"
                   placeholder="Enter Admission number"
-                  name="12-number"
+                  name="admission-number"
                   required
                 />
               </div>
@@ -425,7 +453,7 @@
                 <input
                   type="number"
                   placeholder="Enter Rank"
-                  name="rank"
+                  name="ce-rank"
                   required
                 />
               </div>
@@ -457,7 +485,7 @@
             </div>
           </div>
           <div class="submit-center">
-            <button class="btn btn-submit" type="submit">
+            <button class="btn btn-submit" type="submit" name="regis-submit">
               <span class="btnText">Submit</span>
               <i class="uil uil-navigator"></i>
             </button>
@@ -1402,24 +1430,25 @@
           <div class="result-input">
             <div class="input-field search-field">
               <label>Select Semister</label>
-              <select name="sem" class="sem" required>
+              <select name="result-sem" class="sem" required>
                 <option value="" selected>Select Sem</option>
                 <option value="sem-1">Sem-1</option>
                 <option value="sem-2">Sem-2</option>
                 <option value="sem-3">Sem-3</option>
               </select>
             </div>
+
             <div class="input-field search-field">
               <label>USN Number</label>
               <input
                 type="text"
                 placeholder="Enter USN"
-                name="usn-number"
+                name="result-usn"
                 required
               />
             </div>
 
-            <button class="btn btn-submit result-btn" type="submit">
+            <button class="btn btn-submit result-btn" type="submit" name="result-submit">
               <span class="btnText">Submit</span>
               <i class="uil uil-navigator"></i>
             </button>

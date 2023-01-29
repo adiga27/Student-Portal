@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- *************** -->
+    <!-- META DESCRIPTION -->
+    <!-- *************** -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="DSCE Portal is website for professors to add the marks for each student"
+    />
+    <meta name="theme-color" content="#000" />
+
+    <!-- *************** -->
+    <!-- TAB ICON -->
+    <!-- *************** -->
+    <link rel="icon" href="../img/tab-icon.webp" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.webp" />
 
     <!-- *************** -->
     <!-- FONTS -->
@@ -60,13 +74,24 @@
           /></a>
           <div class="regis-nav_field">
             <ul class="main-nav-list">
-              <a href="#" class="nav-link nav-about">About</a>
-              <a href="#" class="nav-link nav-regis">Marks Entry</a>
-              <!-- <a href="#" class="nav-link nav-notes">Notes</a> -->
-              <a href="#" class="nav-link nav-result">Result</a>
-              <a href="#" rel="logout" class="nav-link nav-logout" name="logout"
-                >Log Out</a
-              >
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-about">About</a>
+              </li>
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-regis">Marks Entry</a>
+              </li>
+              <li class="main-nav-link">
+                <a href="#" class="nav-link nav-result">Result</a>
+              </li>
+              <li class="main-nav-link">
+                <a
+                  href="#"
+                  rel="logout"
+                  class="nav-link nav-logout"
+                  name="logout"
+                  >Log Out</a
+                >
+              </li>
             </ul>
           </div>
           <button class="btn-mobile-nav">
@@ -205,7 +230,7 @@
               <input
                 type="text"
                 placeholder="Enter Student USN"
-                name="studetn-usn"
+                name="marks-usn"
                 required
               />
             </div>
@@ -215,7 +240,6 @@
             <div class="form form-1">
               <h2 class="secondary-heading form-title">Maths-1</h2>
               <div class="fields grid grid--4-cols fileds-maths_1">
-                <!-- <h2 class="secondary-heading notes-title">Maths</h2> -->
                 <div class="input-field">
                   <label>Course Code</label>
                   <input
@@ -650,7 +674,6 @@
             <div class="form form-2">
               <h2 class="secondary-heading form-title">Maths-2</h2>
               <div class="fields grid grid--4-cols fileds-maths_2">
-                <!-- <h2 class="secondary-heading notes-title">Maths</h2> -->
                 <div class="input-field">
                   <label>Course Code</label>
                   <input
@@ -737,13 +760,13 @@
               </div>
 
               <h2 class="secondary-heading form-title">C Programming</h2>
-              <div class="fields grid grid--4-cols fileds-cP">
+              <div class="fields grid grid--4-cols fileds-cp">
                 <div class="input-field">
                   <label>Course Code</label>
                   <input
                     type="number"
                     placeholder="Enter Course Code"
-                    name="cP-code"
+                    name="cp-code"
                     required
                   />
                 </div>
@@ -753,7 +776,7 @@
                   <input
                     type="number"
                     placeholder="Enter Max Marks"
-                    name="cP-max"
+                    name="cp-max"
                     required
                   />
                 </div>
@@ -763,7 +786,7 @@
                   <input
                     type="number"
                     placeholder="Enter Obtained Marks"
-                    name="cP-obtained"
+                    name="cp-obtained"
                     required
                   />
                 </div>
@@ -773,7 +796,7 @@
                   <input
                     type="number"
                     placeholder="Enter Credits"
-                    name="cP-credit"
+                    name="cp-credit"
                     required
                   />
                 </div>
@@ -1425,7 +1448,7 @@
             </div>
           </div>
           <div class="submit-center">
-            <button class="btn btn-submit" type="submit">
+            <button class="btn btn-submit" type="submit" name="marks-submit">
               <span class="btnText">Submit</span>
               <i class="uil uil-navigator"></i>
             </button>
@@ -1446,7 +1469,7 @@
           <div class="result-input">
             <div class="input-field search-field">
               <label>Select Semister</label>
-              <select name="sem" class="sem" required>
+              <select name="result-sem" class="sem" required>
                 <option value="" selected>Select Sem</option>
                 <option value="sem-1">Sem-1</option>
                 <option value="sem-2">Sem-2</option>
@@ -1458,12 +1481,16 @@
               <input
                 type="text"
                 placeholder="Enter USN"
-                name="usn-number"
+                name="result-usn"
                 required
               />
             </div>
 
-            <button class="btn btn-submit result-btn" type="submit">
+            <button
+              class="btn btn-submit result-btn"
+              type="submit"
+              name="result-submit"
+            >
               <span class="btnText">Submit</span>
               <i class="uil uil-navigator"></i>
             </button>

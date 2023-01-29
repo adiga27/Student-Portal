@@ -23,6 +23,7 @@
 
 .regis-logo {
   height: 6rem;
+  width: auto;
 }
 
 .main-nav-list {
@@ -30,6 +31,10 @@
   justify-content: center;
   align-items: center;
   column-gap: 5rem;
+}
+
+.main-nav-link {
+  list-style: none;
 }
 
 .nav-link:link,
@@ -73,6 +78,7 @@
   width: 100%;
   padding: 0 5rem;
   z-index: 999;
+  border-bottom: 1px solid #fff;
 }
 
 /* *************** */
@@ -243,6 +249,7 @@ select {
   background-color: #265df2;
   color: #fff;
   flex-shrink: 0;
+  line-height: 1.1;
 }
 
 .footer-grid {
@@ -252,6 +259,7 @@ select {
 
 .footer-logo {
   height: 9rem;
+  width: auto;
   display: block;
   margin-bottom: 3.2rem;
 }
@@ -304,7 +312,7 @@ select {
 }
 
 .footer-about span {
-  color: #ebdb05;
+  color: #b0faff;
 }
 
 .address {
@@ -316,7 +324,7 @@ select {
   text-decoration: none;
   font-size: 1.6rem;
   transition: all 0.3s;
-  color: #d8e4ff;
+  color: #b0faff;
 }
 
 .footer-link:hover,
