@@ -22,6 +22,19 @@
   .footer-about {
     font-size: 1.6rem;
   }
+  .result-box {
+    padding: 3rem;
+  }
+  .result-heading {
+    letter-spacing: -1px;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .table-credits,
+  .table-marks {
+    width: 10rem;
+  }
 }
 
 /* *************************** */
@@ -93,6 +106,9 @@
   .nav-link:visited {
     font-size: 3rem;
   }
+  .result-container {
+    padding: 6rem 15rem;
+  }
 }
 
 /* *************************** */
@@ -147,6 +163,9 @@
   .logo-col {
     grid-row: 2/3;
     align-items: flex-start;
+  }
+  .result-container {
+    padding: 4rem 8rem;
   }
 }
 
@@ -217,5 +236,39 @@
   }
   .logo-col {
     grid-row: 4/5;
+  }
+  .result-box {
+    padding: 2rem;
+  }
+  .result-container {
+    padding: 2rem 4rem;
+    font-size: 0.9rem;
+  }
+  .result-logo {
+    height: 8rem;
+    width: 8rem;
+  }
+  .result-heading {
+    font-size: 1.7rem;
+  }
+  .result-details {
+    gap: 0 2rem;
+  }
+  .result-details p {
+    font-size: 1.2rem;
+  }
+  .result-table th {
+    font-size: 1rem;
+  }
+  .table-code {
+    padding: 2px;
+    width: 7.5rem;
+  }
+  .table-credits,
+  .table-marks {
+    width: 4rem;
+  }
+  .result-footer {
+    font-size: 0.8rem;
   }
 }
